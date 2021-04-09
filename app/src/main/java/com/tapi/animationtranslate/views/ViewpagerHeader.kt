@@ -13,7 +13,7 @@ class ViewpagerHeader @JvmOverloads constructor(
     }
 
     override fun onPageScrolled(position: Int, positionOffset: Float, positionOffsetPixels: Int) {
-        val numPages = 3
+        val numPages = 5
         progress = (position + positionOffset) / (numPages - 1)
     }
 

@@ -14,18 +14,22 @@
 
     <ConstraintSet android:id="@+id/start">
         <Constraint
-            android:id="@id/content"
+            android:id="@id/text"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             motion:layout_constraintWidth_default="percent"
             motion:layout_constraintWidth_percent="1"
             motion:layout_constraintLeft_toRightOf="@+id/button"
-            motion:layout_constraintTop_toTopOf="parent"/>
+            motion:layout_constraintTop_toTopOf="parent">
+            <CustomAttribute
+                motion:attributeName="textColor"
+                motion:customColorValue="@color/white" />
+        </Constraint>
     </ConstraintSet>
 
     <ConstraintSet android:id="@+id/end">
         <Constraint
-            android:id="@id/content"
+            android:id="@id/text"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             motion:layout_constraintWidth_default="percent"
@@ -34,6 +38,10 @@
             android:scaleY="0.8"
             android:layout_marginLeft="180dp"
             motion:layout_constraintLeft_toLeftOf="parent"
-            motion:layout_constraintTop_toTopOf="parent"/>
+            motion:layout_constraintTop_toTopOf="parent">
+            <CustomAttribute
+                motion:attributeName="textColor"
+                motion:customColorValue="@color/black" />
+        </Constraint>
     </ConstraintSet>
 </MotionScene>

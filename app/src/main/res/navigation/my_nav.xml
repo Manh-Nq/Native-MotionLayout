@@ -44,6 +44,9 @@
         <action
             android:id="@+id/action_fragment_motion_main_to_frgAnim"
             app:destination="@id/frgAnim" />
+        <action
+            android:id="@+id/action_fragment_motion_main_to_demoFragmentMotion"
+            app:destination="@id/demoFragmentMotion" />
 
     </fragment>
     <fragment
@@ -58,7 +61,7 @@
         tools:layout="@layout/fragment_motion4" />
     <fragment
         android:id="@+id/fragment_motion5"
-        android:name="com.tapi.animationtranslate.Fragment_motion5"
+        android:name="com.tapi.animationtranslate.FragmentViewPager"
         android:label="fragment_motion5"
         tools:layout="@layout/fragment_motion5" />
     <fragment
@@ -68,7 +71,7 @@
         tools:layout="@layout/fragment_motion6" />
     <fragment
         android:id="@+id/fragmentAnimator"
-        android:name="com.tapi.animationtranslate.FragmentAnimator"
+        android:name="com.tapi.animationtranslate.FragmentDrawable"
         android:label="fragment_animator"
         tools:layout="@layout/fragment_drawer" />
     <fragment
@@ -76,5 +79,10 @@
         android:name="com.tapi.animationtranslate.FrgAnim"
         android:label="fragment_frg_anim"
         tools:layout="@layout/fragment_frg_anim" />
+    <fragment
+        android:id="@+id/demoFragmentMotion"
+        android:name="com.tapi.animationtranslate.DemoFragmentMotion"
+        android:label="fragment_demo_motion"
+        tools:layout="@layout/fragment_demo_motion" />
 
 </navigation>

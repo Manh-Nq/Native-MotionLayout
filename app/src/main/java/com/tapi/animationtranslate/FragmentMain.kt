@@ -32,6 +32,7 @@ class FragmentMain : Fragment() {
         binding.bt6.setOnClickListener { findNavController().navigate(R.id.action_fragment_motion_main_to_fragment_6) }
         binding.bt7.setOnClickListener { findNavController().navigate(R.id.action_fragment_motion_main_to_fragmentAnimator) }
         binding.bt8.setOnClickListener { findNavController().navigate(R.id.action_fragment_motion_main_to_frgAnim) }
+        binding.bt9.setOnClickListener { findNavController().navigate(R.id.action_fragment_motion_main_to_demoFragmentMotion) }
     }
 
 }

@@ -59,10 +59,15 @@
                     motion:targetId="@id/iv_motion_1"
                     motion:touchAnchorSide="middle"
                     motion:touchAnchorId="@id/iv_motion_1" />-->
-        <OnSwipe
+       <!-- <OnSwipe
+            motion:onTouchUp="stop"
+
+
             motion:dragDirection="dragDown"
             motion:touchAnchorId="@id/iv_motion_1"
-            motion:touchAnchorSide="middle" />
+            motion:touchAnchorSide="middle" />-->
+
+        <OnClick motion:targetId="@id/iv_motion_1"/>
 
 <!--        motion:onTouchUp="stop"-->
         <!--        <OnClick motion:targetId="@id/iv_motion_1" />-->

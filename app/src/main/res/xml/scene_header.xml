@@ -12,6 +12,10 @@
             motion:touchAnchorId="@+id/iv_background"
             motion:touchAnchorSide="bottom"
             motion:dragDirection="dragUp" />
+        <KeyFrameSet>
+
+        </KeyFrameSet>
+
 
 
     </Transition>
