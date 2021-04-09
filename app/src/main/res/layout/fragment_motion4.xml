@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.constraintlayout.motion.widget.MotionLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layoutDescription="@xml/scene_frg4">
+
+    <androidx.constraintlayout.motion.widget.MotionLayout
+        android:id="@+id/motion_child"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#1e376b"
+        app:layoutDescription="@xml/scene_header"
+        app:showPaths="true">
+
+        <com.tapi.animationtranslate.views.BoundsImageView
+            android:id="@+id/iv_background"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/colorAccent"
+            android:scaleType="centerCrop"
+            android:src="@drawable/monterey" />
+
+        <TextView
+            android:id="@+id/tv_motion"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Monterey"
+            android:textColor="#FFF"
+            android:textSize="32dp"
+            android:transformPivotX="0dp"
+            android:transformPivotY="0dp" />
+
+        <TextView
+            android:id="@+id/tv_motion_child"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="California"
+            android:textColor="#FFF"
+            android:textSize="24sp"
+            app:fontFamily="cursive" />
+
+    </androidx.constraintlayout.motion.widget.MotionLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/nested_scroll_view"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/text_margin"
+            android:text="@string/large_text" />
+
+    </androidx.core.widget.NestedScrollView>
+
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:src="@drawable/ic_add_a_photo_24dp"
+        android:background="#000"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+</androidx.constraintlayout.motion.widget.MotionLayout>

@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<MotionScene xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:motion="http://schemas.android.com/apk/res-auto">
+    <Transition
+        motion:constraintSetEnd="@+id/end"
+        motion:constraintSetStart="@+id/start"
+        motion:duration="250"
+        motion:motionInterpolator="linear">
+
+        <OnSwipe
+            motion:dragDirection="dragUp"
+            motion:touchAnchorId="@+id/motion_child"
+            motion:touchAnchorSide="bottom" />
+
+        <KeyFrameSet>
+            <KeyTrigger
+                motion:framePosition="20"
+                motion:motionTarget="@id/fab"
+                motion:onNegativeCross="show"
+                motion:onPositiveCross="hide" />
+
+        </KeyFrameSet>
+
+    </Transition>
+    <ConstraintSet android:id="@+id/start">
+        <Constraint android:id="@id/fab">
+            <PropertySet motion:visibilityMode="ignore" />
+        </Constraint>
+
+        <Constraint
+            android:id="@id/motion_child"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            motion:layout_constraintTop_toTopOf="parent" />
+
+        <Constraint
+            android:id="@id/nested_scroll_view"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            motion:layout_constraintBottom_toBottomOf="parent"
+            motion:layout_constraintTop_toBottomOf="@+id/motion_child" />
+    </ConstraintSet>
+
+    <ConstraintSet android:id="@+id/end">
+        <Constraint
+            android:id="@id/motion_child"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            motion:layout_constraintTop_toTopOf="parent"
+            motion:motionProgress="1" />
+
+        <Constraint
+            android:id="@id/nested_scroll_view"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            motion:layout_constraintBottom_toBottomOf="parent"
+            motion:layout_constraintTop_toBottomOf="@+id/motion_child" />
+    </ConstraintSet>
+
+    <Transition>
+        <OnClick motion:targetId="@+id/fab" />
+        <KeyFrameSet>
+            <KeyAttribute
+                android:rotation="360"
+                motion:framePosition="50"
+                motion:motionTarget="@+id/fab">
+
+            </KeyAttribute>
+        </KeyFrameSet>
+    </Transition>
+</MotionScene>

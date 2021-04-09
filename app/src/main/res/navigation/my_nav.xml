@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/my_nav"
+    app:startDestination="@id/fragment_motion_main">
+
+    <fragment
+        android:id="@+id/fragment_motion1"
+        android:name="com.tapi.animationtranslate.Fragment_motion1"
+        android:label="fragment_motion1"
+        tools:layout="@layout/fragment_motion1" />
+    <fragment
+        android:id="@+id/fragment_motion2"
+        android:name="com.tapi.animationtranslate.Fragment_motion2"
+        android:label="fragment_motion2"
+        tools:layout="@layout/fragment_motion2" />
+    <fragment
+        android:id="@+id/fragment_motion_main"
+        android:name="com.tapi.animationtranslate.FragmentMain"
+        android:label="fragment_motion_main"
+        tools:layout="@layout/fragment_motion_main" >
+        <action
+            android:id="@+id/action_fragment_motion_main_to_fragment_motion2"
+            app:destination="@id/fragment_motion2" />
+        <action
+            android:id="@+id/action_fragment_motion_main_to_fragment_motion1"
+            app:destination="@id/fragment_motion1" />
+        <action
+            android:id="@+id/action_fragment_motion_main_to_fragment_motion3"
+            app:destination="@id/fragment_motion3" />
+        <action
+            android:id="@+id/action_fragment_motion_main_to_fragment_motion4"
+            app:destination="@id/fragment_motion4" />
+        <action
+            android:id="@+id/action_fragment_motion_main_to_fragment_motion5"
+            app:destination="@id/fragment_motion5" />
+        <action
+            android:id="@+id/action_fragment_motion_main_to_fragment_6"
+            app:destination="@id/fragment_6" />
+        <action
+            android:id="@+id/action_fragment_motion_main_to_fragmentAnimator"
+            app:destination="@id/fragmentAnimator" />
+        <action
+            android:id="@+id/action_fragment_motion_main_to_frgAnim"
+            app:destination="@id/frgAnim" />
+
+    </fragment>
+    <fragment
+        android:id="@+id/fragment_motion3"
+        android:name="com.tapi.animationtranslate.Fragment_motion3"
+        android:label="fragment_motion3"
+        tools:layout="@layout/fragment_motion3" />
+    <fragment
+        android:id="@+id/fragment_motion4"
+        android:name="com.tapi.animationtranslate.Fragment_motion4"
+        android:label="fragment_motion4"
+        tools:layout="@layout/fragment_motion4" />
+    <fragment
+        android:id="@+id/fragment_motion5"
+        android:name="com.tapi.animationtranslate.Fragment_motion5"
+        android:label="fragment_motion5"
+        tools:layout="@layout/fragment_motion5" />
+    <fragment
+        android:id="@+id/fragment_6"
+        android:name="com.tapi.animationtranslate.Fragment_6"
+        android:label="fragment_6"
+        tools:layout="@layout/fragment_motion6" />
+    <fragment
+        android:id="@+id/fragmentAnimator"
+        android:name="com.tapi.animationtranslate.FragmentAnimator"
+        android:label="fragment_animator"
+        tools:layout="@layout/fragment_drawer" />
+    <fragment
+        android:id="@+id/frgAnim"
+        android:name="com.tapi.animationtranslate.FrgAnim"
+        android:label="fragment_frg_anim"
+        tools:layout="@layout/fragment_frg_anim" />
+
+</navigation>
